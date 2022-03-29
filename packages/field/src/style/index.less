@@ -1,0 +1,9 @@
+@antdv-components-entry: if(isdefined(@root-entry-name),
+if(@root-entry-name = variable, index-pure, index),
+index
+);
+
+@antdv-entry: if(@antdv-components-entry = index, default, variable);
+@import 'ant-design-vue/lib/style/@{antdv-entry}.less';
+@import "./default.less";
+@import "./status.less";

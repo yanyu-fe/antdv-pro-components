@@ -1,0 +1,37 @@
+{
+  "name": "@yanyu-fe/pro-utils",
+  "version": "1.0.3",
+  "description": "pro-utils",
+  "main": "dist/ProUtils.cjs.js",
+  "module": "dist/ProUtils.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build",
+    "prepublish": "pnpm build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "aibayanyu",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.4",
+    "@vitejs/plugin-vue-jsx": "^1.3.8",
+    "@vue/tsconfig": "^0.1.3",
+    "cpx": "^1.5.0",
+    "scroll-into-view-if-needed": "^2.2.29",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6",
+    "vite-plugin-dts": "^0.9.10",
+    "vitest": "^0.7.4"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.1.0-rc.2",
+    "vue": "^3.2.31",
+    "vue-types": "3.x"
+  }
+}

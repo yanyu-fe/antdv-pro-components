@@ -1,0 +1,9 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.web.json",
+    "include": ["env.d.ts", "src/**/*", "src/**/*.tsx", "src/typing.ts"],
+    "exclude": ["src/**/__tests__/*"],
+    "compilerOptions": {
+      "composite": true,
+      "baseUrl": ".",
+    }
+  }

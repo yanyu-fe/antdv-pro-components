@@ -1,0 +1,56 @@
+{
+  "name": "pro-components-monorepo",
+  "version": "1.0.0",
+  "description": "ant-design-vue 高级组件库文档",
+  "keywords": [
+    "ant-design-vue",
+    "ant-design",
+    "antd",
+    "vue",
+    "pro-field",
+    "pro-form",
+    "pro-components"
+  ],
+  "license": "MIT",
+  "author": "aibayanyu",
+  "repository": {
+    "type": "git",
+    "url": "https://git.28yanyu.cn/yanyu/antdv-pro-components.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "demo": "pnpm dev --filter=demo"
+  },
+  "contributors": [
+    "aibayanyu <aibayanyu@qq.com>"
+  ],
+  "packageManager": "pnpm@6.32.3",
+  "devDependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "@mistjs/eslint-config-vue": "^0.0.1",
+    "@rushstack/eslint-patch": "^1.1.1",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "ant-design-vue": "^3.1.0-rc.1",
+    "cpx": "^1.5.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-n": "14",
+    "eslint-plugin-vue": "^8.5.0",
+    "pnpm": "^6.32.3",
+    "scroll-into-view-if-needed": "^2.2.29",
+    "typescript": "^4.6.2",
+    "vue": "^3.2.31",
+    "vue-types": "3.x"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint-plugin-n",
+        "react",
+        "react-dom"
+      ]
+    }
+  }
+}

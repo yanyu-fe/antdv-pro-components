@@ -1,0 +1,18 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.web.json",
+    "include": ["env.d.ts", "src/**/*", "src/**/*.vue","../packages/**/src/**/*"],
+    "exclude": ["src/**/__tests__/*"],
+    "compilerOptions": {
+      "composite": true,
+      "baseUrl": ".",
+      "rootDir": "../",
+      "paths": {
+        "@yanyu-fe/pro-field":["../packages/field/src"],
+        "@yanyu-fe/pro-form":["../packages/form/src"],
+        "@yanyu-fe/pro-layout":["../packages/layout/src"],
+        "@yanyu-fe/pro-provider":["../packages/provider/src"],
+        "@yanyu-fe/pro-utils":["../packages/utils/src"],
+        "@/*": ["./src/*"]
+      }
+    }
+  }

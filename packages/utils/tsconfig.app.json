@@ -1,0 +1,10 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.web.json",
+    "include": ["src/**/*.ts","src/index.ts"],
+    "exclude": ["src/**/__tests__/*"],
+    "compilerOptions": {
+      "composite": true,
+      "baseUrl": ".",
+      "module": "ESNext",
+    }
+  }

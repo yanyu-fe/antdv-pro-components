@@ -1,0 +1,26 @@
+type: docker
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+workspace:
+  base: /lib/info
+  path: pro-components
+steps:
+  - name: node
+    image: node:16
+    environment:
+      NPM_SECRET:
+        from_secret: npm_secret
+    commands:
+      - npm i -g pnpm
+      - npm config set //registry.npmjs.org/:_authToken=$NPM_SECRET
+      - pnpm i
+      - which pnpm
+      - pnpm publish --filter=@yanyu-fe/pro-utils --no-git-checks --registry=https://registry.npmjs.org/
+trigger:
+  branch:
+    - main

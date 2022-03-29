@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish
+        uses: actions/publish-to-github@v2
+        with:
+          owner: ${GITHUB_REPOSITORY_OWNER}
+          repo: ${GITHUB_REPOSITORY_NAME}
+          token: ${GITHUB_TOKEN}
+          release_name: ${GITHUB_RUN_ID}
+          release_tag: ${GITHUB_RUN_ID}
+          target_commitish: ${GITHUB_SHA}
+          draft: false
+          prerelease: false
+          assets:
+            - path: ${GITHUB_RUN_ID}.zip
+              name: ${GITHUB_RUN_ID}
+              content_type: application/zip
+              content_file: ${GITHUB_RUN_ID}.zip

@@ -3,7 +3,7 @@ import { formProps } from 'ant-design-vue/lib/form/Form'
 import type { Dayjs } from 'dayjs'
 import { omit } from 'lodash'
 import type { ExtractPropTypes, PropType, Ref } from 'vue'
-import { defineComponent } from 'vue'
+import { defineComponent, shallowRef } from 'vue'
 import type { SubmitterProps } from '../components/Submitter'
 import type { FieldProps, FormItemProps, GroupProps, ProRequestData } from '../interface'
 
@@ -103,10 +103,13 @@ export const baseFormProps = {
   },
 }
 
+const requestFormCacheId = shallowRef(0)
+
 const BaseForm = defineComponent({
   name: 'BaseForm',
   props: baseFormProps,
   setup(_props) {
+    requestFormCacheId.value += 0
     return () => {
       return (
         <div>

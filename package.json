@@ -23,7 +23,8 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "demo": "pnpm dev --filter=demo"
+    "demo": "pnpm dev --filter=demo",
+    "build:utils": "pnpm build --filter=pro-utils"
   },
   "contributors": [
     "aibayanyu <aibayanyu@qq.com>"

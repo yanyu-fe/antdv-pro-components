@@ -3,11 +3,13 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: ['vue-types', 'vue'],
+      external: ['vue-types', 'vue', '@vueuse/core', 'swr'],
       output: {
         globals: {
           'vue-types': 'VueTypes',
           'vue': 'Vue',
+          '@vueuse/core': 'VueUse',
+          'swr': 'swr',
         },
       },
     },
